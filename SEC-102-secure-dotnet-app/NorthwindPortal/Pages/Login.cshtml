@@ -1,0 +1,9 @@
+@page
+@model NorthwindPortal.Pages.LoginModel
+<h2>Staff Login</h2>
+<form method="post">
+  <input name="Username" placeholder="Username" /><br />
+  <input name="Password" type="password" placeholder="Password" /><br />
+  <button type="submit">Log in</button>
+</form>
+<p>@Model.Message</p>

@@ -1,0 +1,25 @@
+// SEC-102 | ORIGINAL VULNERABLE VERSION - for learning only, do NOT deploy
+// Flaws: SQL injection (string concatenation), plain-text passwords, no lockout
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.RazorPages;
+using Microsoft.Data.Sqlite;
+
+namespace NorthwindPortal.Pages;
+
+public class LoginModel : PageModel
+{
+    [BindProperty] public string Username { get; set; } = "";
+    [BindProperty] public string Password { get; set; } = "";
+    public string Message { get; set; } = "";
+
+    public void OnPost()
+    {
+        using var conn = new SqliteConnection("Data Source=northwind.db");
+        conn.Open();
+        // VULNERABLE: user input glued straight into SQL. Try username: admin' --
+        var sql = $"SELECT Username FROM Users WHERE Username = '{Username}' AND Password = '{Password}'";
+        using var cmd = new SqliteCommand(sql, conn);
+        var result = cmd.ExecuteScalar();
+        Message = result != null ? $"Welcome, {result}!" : "Invalid login.";
+    }
+}
