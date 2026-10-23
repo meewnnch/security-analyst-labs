@@ -9,7 +9,7 @@ Each lab is written as a ticket at **Northwind Wellness**, a simulated company, 
 | Ticket | Lab | Skills | Status |
 |---|---|---|---|
 | [SEC-101](./SEC-101-ssh-bruteforce) | SSH brute-force incident investigation | Linux log analysis, `grep`/`awk`, incident response, hardening | Complete |
-| SEC-102 | Secure .NET web app mapped to the OWASP Top 10 | Secure coding, authentication, input validation | Planned |
+| [SEC-102](./SEC-102-secure-dotnet-app) | Secure .NET web app mapped to the OWASP Top 10 | ASP.NET Core, SQL injection fix, salted password hashing, account lockout, security headers (CSP) | Complete |
 | SEC-103 | Home lab with SIEM monitoring | Windows Server, Linux, log collection, alerting | Planned |
 
 ## Tools and Skills
