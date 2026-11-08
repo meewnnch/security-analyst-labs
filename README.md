@@ -10,7 +10,7 @@ Each lab is written as a ticket at **Northwind Wellness**, a simulated company, 
 |---|---|---|---|
 | [SEC-101](./SEC-101-ssh-bruteforce) | SSH brute-force incident investigation | Linux log analysis, `grep`/`awk`, incident response, hardening | Complete |
 | [SEC-102](./SEC-102-secure-dotnet-app) | Secure .NET web app mapped to the OWASP Top 10 | ASP.NET Core, SQL injection fix, salted password hashing, account lockout, security headers (CSP) | Complete |
-| SEC-103 | Home lab with SIEM monitoring | Windows Server, Linux, log collection, alerting | Planned |
+| [SEC-103](./SEC-103-wazuh-siem) | Home lab with SIEM monitoring | Wazuh all-in-one on Ubuntu, Windows 11 agent, Event ID 4625 triage | Complete |
 
 ## Tools and Skills
 - **Security:** log analysis, incident response, system hardening, Security+ concepts
